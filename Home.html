@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="اتحاد الطلاب السودانيين في جامعة قبرص الدولية - Sudanese Students Union at Cyprus International University">
+  <meta name="keywords" content="طلاب سودانيين, قبرص الدولية, CIU, Sudanese Students, Cyprus">
+  <meta property="og:title" content="اتحاد الطلاب السودانيين - CIU">
+  <meta property="og:description" content="موقع رسمي لاتحاد الطلاب السودانيين في جامعة قبرص الدولية">
+  <title>اتحاد الطلاب السودانيين | Sudanese Students Union - CIU</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- External CSS & JS -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header id="mainHeader">
+    <div class="header-inner">
+      <a href="#home" class="logo">
+        <div class="logo-icon"><span><img src="img/logo.png" alt="Logo"></span></div>
+        <div class="logo-text">
+          <div class="er"><h2 style="color: black; margin:0;">SSU_CIU</h2></div>
+          <div class="ar" style="font-size:x-small; color:var(--red);">اتحاد الطلاب السودانيين في جامعة قبرص الدولية</div>
+        </div>
+      </a>
+
+      <nav>
+        <ul>
+          <li class="nav-link"><a href="#home"><i class="fas fa-home"></i> الرئيسية</a></li>
+          <li class="nav-link"><a href="#about"><i class="fas fa-info-circle"></i> عن الاتحاد</a></li>
+          <li class="nav-link"><a href="#structure">هيكل الاتحاد <i class="fas fa-sitemap"></i></a></li>
+          <li class="nav-link"><a href="#members"><i class="fas fa-users"></i> الأعضاء</a></li>
+          <li class="nav-link"><a href="#news"><i class="fas fa-newspaper"></i> الأخبار</a></li>
+          <li class="nav-link"><a href="#gallery"><i class="fas fa-images"></i> المعرض</a></li>
+          <li class="nav-link"><a href="#activities"><i class="fas fa-calendar-alt"></i> الفعاليات</a></li>
+          <li class="nav-link"><a href="#guidelines"><i class="fas fa-book"></i> الإرشادات</a></li>
+          <li class="nav-link"><a href="#links"><i class="fas fa-link"></i> روابط مهمة</a></li>
+          <li class="nav-link"><a href="#contact"><i class="fas fa-envelope"></i> تواصل</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="notif-container">
+          <button class="btn-icon" id="notifBtn" aria-label="الإشعارات" title="الإشعارات">
+            <i class="fas fa-bell"></i>
+            <span class="badge" id="notifBadge">3</span>
+          </button>
+          <div class="notif-panel" id="notifPanel">
+            <div class="notif-header">
+              <h4><i class="fas fa-bell" style="color:var(--red);margin-inline-end:8px"></i>الإشعارات</h4>
+              <span class="notif-mark" onclick="markAllRead()">تحديد الكل كمقروء</span>
+            </div>
+            <div class="notif-list">
+              <div class="notif-item unread"><div class="notif-dot"></div><div><p>مهرجان التراث السوداني بعد 5 أيام! تأكد من تسجيل مشاركتك.</p><small><i class="fas fa-clock"></i> منذ ساعتين</small></div></div>
+              <div class="notif-item unread"><div class="notif-dot"></div><div><p>آخر موعد لدفع اشتراك العضوية هو يوم الجمعة القادم.</p><small><i class="fas fa-clock"></i> منذ 5 ساعات</small></div></div>
+              <div class="notif-item unread"><div class="notif-dot"></div><div><p>تم رفع محاضرات مادة الإحصاء - الأمانة الأكاديمية</p><small><i class="fas fa-clock"></i> منذ يوم</small></div></div>
+              <div class="notif-item read"><div class="notif-dot"></div><div><p>نتائج بطولة الشطرنج: تهانينا للفائزين!</p><small><i class="fas fa-clock"></i> منذ 3 أيام</small></div></div>
+            </div>
+            <div class="notif-footer"><a href="#activities">عرض جميع الفعاليات القادمة</a></div>
+          </div>
+        </div>
+
+        <div class="quick-actions">
+          <button class="btn-icon" id="quickActionsBtn" aria-label="الإعدادات السريعة" title="اللغة / الوضع الليلي">
+            <i class="fas fa-sliders-h"></i>
+          </button>
+          <div class="quick-panel" id="quickPanel">
+            <button class="lang-btn" id="langBtn" aria-label="Switch Language" title="عربي / English">
+              <i class="fas fa-language"></i>
+              <span id="langLabel" class="lang-ar"></span>
+              <span id="langLabel-en" class="lang-en"></span>
+            </button>
+            <button class="dark-toggle" id="darkToggle" aria-label="تبديل الوضع المظلم" title="الوضع المظلم">
+              <i class="fas fa-moon" id="darkIcon"></i>
+            </button>
+          </div>
+        </div>
+
+        <button id="menu-toggle" class="menu-toggle" aria-label="فتح القائمة">☰</button>
+      </div>
+    </div>
+  
+
+<div class="dropdown-menu" id="dropdownMenu">
+    <div class="dropdown-header">
+      <span>القائمة</span>
+      <button class="dropdown-close" id="dropdownClose">✕</button>
+    </div>
+    <div class="dropdown-body">
+    <nav class="dropdown-nav">
+      <a href="#home" class="dropdown-link" onclick="closeDropdown()"><i class="fas fa-home"></i> الرئيسية</a>
+      <a href="#about" class="dropdown-link" onclick="closeDropdown()"><i class="fas fa-info-circle"></i> عن الاتحاد</a>
+       <a href="#structure" class="dropdown-link" onclick="closeDropdown()"><i class="fas fa-sitemap"></i> هيكل الاتحاد</a>
+      <a href="#members" class="dropdown-link" onclick="closeDropdown()"><i class="fas fa-users"></i> الأعضاء</a>
+      <a href="#news" class="dropdown-link" onclick="closeDropdown()"><i class="fas fa-newspaper"></i> الأخبار</a>
+      <a href="#gallery" class="dropdown-link" onclick="closeDropdown()"><i class="fas fa-images"></i> المعرض</a>
+      <a href="#activities" class="dropdown-link" onclick="closeDropdown()"><i class="fas fa-calendar-alt"></i> الفعاليات</a>
+      <a href="#guidelines" class="dropdown-link" onclick="closeDropdown()"><i class="fas fa-book"></i> الإرشادات</a>
+      <a href="#links" class="dropdown-link" onclick="closeDropdown()"><i class="fas fa-link"></i> روابط مهمة</a>
+      <a href="#contact" class="dropdown-link" onclick="closeDropdown()"><i class="fas fa-envelope"></i> تواصل معنا</a>
+    </nav>
+    </div>
+        <div class="dropdown-footer">
+      <button class="menu-item-toggle quick-settings-btn" id="quickSettingsMobile" aria-label="الإعدادات السريعة">
+        <i class="fas fa-sliders-h"></i>
+        <span>إعدادات سريعة</span>
+      </button>
+      <div class="quick-panel-mobile" id="quickPanelMobile">
+        <button class="lang-btn-mobile menu-item-toggle" id="langBtn-mobile" aria-label="تغيير اللغة">
+          <i class="fas fa-language"></i>
+          <span id="langLabel-mobile" class="lang-ar">ع</span>
+          <span id="langLabel-mobile-en" class="lang-en">EN</span>
+        </button>
+        <button class="dark-toggle-mobile menu-item-toggle" id="darkToggle-mobile" aria-label="تبديل الوضع المظلم">
+          <i class="fas fa-moon" id="darkIcon-mobile"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text fade-left">
+        <div class="badge-pill">
+          <i class="fas fa-circle pulse" style="color:#ffd700;font-size:8px"></i>
+          جامعة قبرص الدولية | Cyprus International University
+        </div>
+        <h1>اتحاد الطلاب السودانيين</h1>
+        <h2>Sudanese Students Union - CIU</h2>
+        <p>منصة موحدة للطلاب السودانيين في قبرص، نبني جسور التواصل، ندعم التميز الأكاديمي، ونحتفي بهويتنا السودانية بعيداً عن وطننا.</p>
+        <div class="hero-cta">
+          <a href="#members" class="btn btn-primary"><i class="fas fa-user-plus"></i> انضم إلينا</a>
+          <a href="#activities" class="btn btn-outline"><i class="fas fa-calendar-alt"></i> الفعاليات القادمة</a>
+          <a href="#contact" class="btn btn-green"><i class="fas fa-envelope"></i> تواصل معنا</a>
+          <a href="#about" class="btn btn-outline"><i class="fas fa-history"></i> تاريخ الاتحاد</a>
+        </div>
+      </div>
+
+      <div class="fade-right hero-right-col">
+        <div class="countdown-card float">
+          <div class="countdown-title">العد التنازلي للفعالية القادمة</div>
+          <div class="countdown-event"><i class="fas fa-star"></i>مهرجان التراث السوداني 2024</div>
+          <div class="countdown-grid">
+            <div class="count-item"><span class="count-num" id="cdDays">00</span><span class="count-label">يوم</span></div>
+            <div class="count-item"><span class="count-num" id="cdHours">00</span><span class="count-label">ساعة</span></div>
+            <div class="count-item"><span class="count-num" id="cdMins">00</span><span class="count-label">دقيقة</span></div>
+            <div class="count-item"><span class="count-num" id="cdSecs">00</span><span class="count-label">ثانية</span></div>
+          </div>
+          <a href="#activities" class="btn btn-primary" style="width:100%;justify-content:center"><i class="fas fa-ticket-alt"></i> سجل الآن</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat"><strong class="counter" data-target="247">247</strong><span>عضو مسجل</span></div>
+          <div class="hero-stat"><strong class="counter" data-target="38">38</strong><span>فعالية منفذة</span></div>
+          <div class="hero-stat"><strong class="counter" data-target="7">7</strong><span>أمانة نشطة</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img fade-left">
+          <img src="img/about.png" alt="الاتحاد" loading="lazy">
+          <div class="about-img-badge"><strong>2021</strong><span>سنة التأسيس</span></div>
+        </div>
+        <div class="about-content fade-right">
+          <span class="section-tag"><i class="fas fa-info-circle"></i> تعرف علينا</span>
+          <h2 class="section-title">عن اتحاد الطلاب السودانيين</h2>
+          <p>تأسس اتحاد الطلاب السودانيين في جامعة قبرص الدولية عام 2019، بمبادرة من مجموعة من الطلاب السودانيين الرواد الذين أرادوا إنشاء كيان منظم يجمع الطلاب السودانيين ويخدم احتياجاتهم.</p>
+          <p>يضم الاتحاد اليوم أكثر من 247 عضواً من مختلف التخصصات والمراحل الدراسية، ويعمل من خلال 7 أمانات متخصصة تغطي جميع جوانب الحياة الطلابية الأكاديمية والاجتماعية والثقافية والرياضية.</p>
+          <p>نؤمن بأن التنوع قوة، وأن مجتمعاً طلابياً متماسكاً هو الأساس لتحقيق التميز الأكاديمي والنمو الشخصي في غربة يحلوها التكاتف والتعاون.</p>
+
+          <div class="about-values">
+            <div class="value-item"><div class="value-icon bg-red-soft color-red"><i class="fas fa-bullseye"></i></div><div><h4>رؤيتنا</h4><p>أن نكون نموذجاً متميزاً لاتحادات الطلاب العرب في قبرص</p></div></div>
+            <div class="value-item"><div class="value-icon bg-green-soft color-green"><i class="fas fa-rocket"></i></div><div><h4>رسالتنا</h4><p>خدمة الطلاب السودانيين أكاديمياً واجتماعياً وثقافياً</p></div></div>
+            <div class="value-item"><div class="value-icon" style="background:rgba(251,191,36,0.1);color:#d97706"><i class="fas fa-award"></i></div><div><h4>قيمنا</h4><p>الشفافية، الديمقراطية، التنوع، والاحترام المتبادل</p></div></div>
+            <div class="value-item"><div class="value-icon" style="background:rgba(99,102,241,0.1);color:#6366f1"><i class="fas fa-file-pdf"></i></div><div><h4>الدستور</h4><p>يحدد حقوق وواجبات الأعضاء وآليات عمل الاتحاد</p></div></div>
+          </div>
+
+          <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+            <a href="file/SSU.pdf" class="btn btn-primary" target="_blank"><i class="fas fa-download"></i> تحميل الدستور PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRUCTURE SECTION -->
+  <section class="structure-section" id="structure">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="section-tag"><i class="fas fa-sitemap"></i> التنظيم</span>
+        <h2 class="section-title">هيكل الاتحاد</h2>
+        <p class="section-subtitle">تنظيم ديمقراطي شفاف يضمن تمثيل جميع الطلاب وخدمة احتياجاتهم بكفاءة</p>
+      </div>
+
+      <nav class="structure-nav fade-in" role="navigation" aria-label="هيكل الاتحاد">
+        <ul>
+          <li><a href="#general-assembly" onclick="switchStructurePanel('general-assembly', this); return false;" class="active"><i class="fas fa-users"></i> الجمعية العمومية</a></li>
+          <li><a href="#exec-office" onclick="switchStructurePanel('exec-office', this); return false;"><i class="fas fa-briefcase"></i> المكتب التنفيذي</a></li>
+          <li><a href="#experts-council" onclick="switchStructurePanel('experts-council', this); return false;"><i class="fas fa-users-cog"></i> مجلس الخبراء</a></li>
+          <li><a href="#secretariats" onclick="switchStructurePanel('secretariats', this); return false;"><i class="fas fa-sitemap"></i> الأمانات المتخصصة</a></li>
+        </ul>
+      </nav>
+
+      <div class="structure-content">
+        <style>.structure-panel:not(#general-assembly) { display: none; }</style>
+        
+        <section id="general-assembly" class="structure-panel fade-left">
+          <div class="panel-card">
+            <div class="panel-icon council-icon"><i class="fas fa-users"></i></div>
+            <h3>الجمعية العمومية</h3>
+            <p>هي المرجعية العليا للاتحاد وتتكون من جميع الأعضاء الذين تنطبق عليهم شروط العضوية وهي التي تنتخب المكتب التنفيذي للاتحاد وينعقد اجتماعها ثلاث مرات في السنة على الأقل ما عدا الطارئة لمتابعة ومناقشة اعمال المكتب التنفيذي والوضع المالي للاتحاد.</p>
+            <div class="features-list">
+              <div class="feature-item"><i class="fas fa-calendar"></i><span>اجتماعات نصف سنوية (ديسمبر ويونيو)</span></div>
+              <div class="feature-item"><i class="fas fa-vote-yea"></i><span>انتخابات سنوية لقيادات المكتب التنفيذي</span></div>
+              <div class="feature-item"><i class="fas fa-users"></i><span>النصاب القانوني: 50% من الأعضاء</span></div>
+              <div class="feature-item"><i class="fas fa-gavel"></i><span>صلاحية تعديل الدستور بالأغلبية</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="exec-office" class="structure-panel fade-in">
+          <div class="panel-card exec-intro fade-in">
+            <div class="panel-icon council-icon"><i class="fas fa-briefcase"></i></div>
+            <h3>المكتب التنفيذي</h3>
+            <p>مكتب يتكون من <strong>15 عضواً منتخباً</strong> من الجمعية العمومية للاتحاد عبر انتخابات ديمقراطية مباشرة أو لجنة الانتخابات. يشمل الرئيس، الأمين العام، وأمناء الأمانات المتخصصة، بالإضافة إلى ممثل مجلس الخبراء. يقود الاتحاد برئاسة طالب منتخب من الطلاب السودانيين في CIU.</p>
+            <div class="exec-term" style="margin-top:16px; padding:12px; background:rgba(99,102,241,0.08); border-radius:8px; border-left:4px solid #6366f1; font-weight:600;">
+              <i class="fas fa-calendar-alt" style="color:#6366f1; margin-inline-end:8px;"></i>
+              <strong>مدة الولاية: عام أكاديمي كامل (سبتمبر - أغسطس)</strong>
+            </div>
+            <div class="exec-features" style="margin-top:20px; padding:16px; background:rgba(0,122,61,0.06); border-radius:8px; border-left:4px solid var(--green);">
+              <h4 style="font-size:14px; color:var(--green); margin-bottom:8px; display:flex; align-items:center; gap:8px;">
+                <i class="fas fa-users-cog" style="font-size:16px;"></i>تكوين المكتب التنفيذي
+              </h4>
+              <ul style="font-size:13px; color:var(--gray-700); line-height:1.6; margin:0; padding-inline-start:20px;">
+                <li>رئيس الاتحاد (1)</li>
+                <li>الأمين العام و النائب (2)</li>
+                <li>أمناء 7 أمانات و نوابهم (14)</li>
+              </ul>
+            </div>
+          </div>
+          <br>
+          <div><h2>أعضاء المكتب التنفيذي</h2></div>
+          <div class="exec-grid">
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="رئيس" loading="lazy"><span class="exec-badge">رئيس الاتحاد</span></div><div class="exec-info"><h3>أسم</h3><div class="role">رئيس الاتحاد</div><p>التخصص</p><div class="exec-contact"><a href="mailto:ahmed@ciu.edu.tr" title="البريد الإلكتروني"><i class="fas fa-envelope"></i></a><a href="#" title="واتساب"><i class="fab fa-whatsapp"></i></a><a href="#" title="تيليغرام"><i class="fab fa-telegram"></i></a></div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="الأمين العام" loading="lazy"><span class="exec-badge">الأمين العام</span></div><div class="exec-info"><h3>اسم</h3><div class="role">الأمين العام</div><p>التخصص</p><div class="exec-contact"><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-telegram"></i></a></div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="نائب الأمين العام" loading="lazy"><span class="exec-badge">نائب الأمين العام</span></div><div class="exec-info"><h3>اسم</h3><div class="role">نائب الأمين العام</div><p>التخصص</p><div class="exec-contact"><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-telegram"></i></a></div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="أمين المال" loading="lazy"><span class="exec-badge">الأمين المالي</span></div><div class="exec-info"><h3>اسم </h3><div class="role">الأمين المالي</div><p>التخصص</p><div class="exec-contact"><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-telegram"></i></a></div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="أمين العلاقات الخارجية" loading="lazy"><span class="exec-badge">أمين العلاقات الخارجية</span></div><div class="exec-info"><h3>اسم</h3><div class="role">أمين العلاقات الخارجية</div><p>التخصص</p><div class="exec-contact"><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-telegram"></i></a></div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="الأمين الإعلامي" loading="lazy"><span class="exec-badge">الأمين الإعلامي</span></div><div class="exec-info"><h3>اسم</h3><div class="role">الأمين الإعلامي</div><p>التخصص</p><div class="exec-contact"><a href="mailto:abdrahman@ciu.edu.tr" title="البريد الإلكتروني"><i class="fas fa-envelope"></i></a><a href="#" title="واتساب"><i class="fab fa-whatsapp"></i></a><a href="#" title="تيليغرام"><i class="fab fa-telegram"></i></a></div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="الأمين الأكاديمي" loading="lazy"><span class="exec-badge">الأمين الأكاديمي</span></div><div class="exec-info"><h3>اسم</h3><div class="role">الأمين الأكاديمي</div><p>التخصص</p><div class="exec-contact"><a href="mailto:fatima@ciu.edu.tr" title="البريد الإلكتروني"><i class="fas fa-envelope"></i></a><a href="#" title="واتساب"><i class="fab fa-whatsapp"></i></a><a href="#" title="تيليغرام"><i class="fab fa-telegram"></i></a></div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="الأمين الثقافي" loading="lazy"><span class="exec-badge">الأمين الثقافي</span></div><div class="exec-info"><h3>اسم</h3><div class="role">الأمين الثقافي</div><p>التخصص</p><div class="exec-contact"><a href="mailto:mohamed@ciu.edu.tr" title="البريد الإلكتروني"><i class="fas fa-envelope"></i></a><a href="#" title="واتساب"><i class="fab fa-whatsapp"></i></a><a href="#" title="تيليغرام"><i class="fab fa-telegram"></i></a></div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="الأمين الاجتماعي" loading="lazy"><span class="exec-badge">الأمين الاجتماعي</span></div><div class="exec-info"><h3>اسم</h3><div class="role">الأمين الاجتماعي</div><p>التخصص</p><div class="exec-contact"><a href="mailto:mohamed@ciu.edu.tr" title="البريد الإلكتروني"><i class="fas fa-envelope"></i></a><a href="#" title="واتساب"><i class="fab fa-whatsapp"></i></a><a href="#" title="تيليغرام"><i class="fab fa-telegram"></i></a></div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="أمين المال" loading="lazy"><span class="exec-badge">نائب الأمين المالي</span></div><div class="exec-info"><h3>اسم </h3><div class="role">نائب الأمين المالي</div><p>التخصص</p><div class="exec-contact"><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-telegram"></i></a></div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="أمين العلاقات الخارجية" loading="lazy"><span class="exec-badge">نائب أمين العلاقات الخارجية</span></div><div class="exec-info"><h3>اسم</h3><div class="role">نائب أمين العلاقات الخارجية</div><p>التخصص</p><div class="exec-contact"><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-telegram"></i></a></div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="الأمين الإعلامي" loading="lazy"><span class="exec-badge">نائب الأمين الإعلامي</span></div><div class="exec-info"><h3>اسم</h3><div class="role">نائب الأمين الإعلامي</div><p>التخصص</p><div class="exec-contact"><a href="mailto:abdrahman@ciu.edu.tr" title="البريد الإلكتروني"><i class="fas fa-envelope"></i></a><a href="#" title="واتساب"><i class="fab fa-whatsapp"></i></a><a href="#" title="تيليغرام"><i class="fab fa-telegram"></i></a></div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="الأمين الأكاديمي" loading="lazy"><span class="exec-badge">نائب الأمين الأكاديمي</span></div><div class="exec-info"><h3>اسم</h3><div class="role">نائب الأمين الأكاديمي</div><p>التخصص</p><div class="exec-contact"><a href="mailto:fatima@ciu.edu.tr" title="البريد الإلكتروني"><i class="fas fa-envelope"></i></a><a href="#" title="واتساب"><i class="fab fa-whatsapp"></i></a><a href="#" title="تيليغرام"><i class="fab fa-telegram"></i></a></div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="الأمين الثقافي" loading="lazy"><span class="exec-badge">نائب الأمين الثقافي</span></div><div class="exec-info"><h3>اسم</h3><div class="role">نائب الأمين الثقافي</div><p>التخصص</p><div class="exec-contact"><a href="mailto:mohamed@ciu.edu.tr" title="البريد الإلكتروني"><i class="fas fa-envelope"></i></a><a href="#" title="واتساب"><i class="fab fa-whatsapp"></i></a><a href="#" title="تيليغرام"><i class="fab fa-telegram"></i></a></div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="الأمين الاجتماعي" loading="lazy"><span class="exec-badge">نائب الأمين الاجتماعي</span></div><div class="exec-info"><h3>اسم</h3><div class="role">نائب الأمين الاجتماعي</div><p>التخصص</p><div class="exec-contact"><a href="mailto:mohamed@ciu.edu.tr" title="البريد الإلكتروني"><i class="fas fa-envelope"></i></a><a href="#" title="واتساب"><i class="fab fa-whatsapp"></i></a><a href="#" title="تيليغرام"><i class="fab fa-telegram"></i></a></div></div></div>
+          
+          </div>
+          <br>
+        </section>
+
+        <section id="experts-council" class="structure-panel fade-in">
+          <div class="tab-panel experts-panel">
+            <div class="fade-left"><div class="panel-card"><div class="panel-icon council-icon"><i class="fas fa-users-cog"></i></div><h3>مجلس الخبراء</h3><p>هو المجلس الرقابي والتوجيهي والإرشادي والمحاسب للمكتب التنفيذي بعد الرجوع للجمعية العمومية، بما ينص عليه النظام الأساسي.</p><div class="features-box"><h3 style=" color:var(--green); margin-bottom:8px; display:flex; align-items:center; gap:8px;">تكوين مجلس الخبراء</h3><ul><li><strong>يتكون مجلس الخبراء من 5 أعضاء كالآتي:</strong></li><li>عضوين من المكتب التنفيذي السابق.</li><li>ثلاثة أعضاء ذو خبرة وكفاءة ملموسة تختارهم الجمعية العمومية.</li></ul></div><div class="special-notice"><p> <i class="fas fa-gavel"></i>  في حال خلو مقعد أو أكثر يجوز للجمعية العمومية اختيار عضو جديد باتفاق الأغلبية البسيطة (50%+1).</p></div></div></div>
+            <div class="members-grid-section"><h2>أعضاء مجلس الخبراء</h2><div class="exec-grid">
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="عضو 1" loading="lazy"><span class="exec-badge council-member">عضو 1</span></div><div class="exec-info"><h3>عبدالرحمن أحمد</h3><div class="role">من المكتب السابق</div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="عضو 2" loading="lazy"><span class="exec-badge council-member">عضو 2</span></div><div class="exec-info"><h3>فاطمة الزين</h3><div class="role">من المكتب السابق</div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="عضو 3" loading="lazy"><span class="exec-badge council-member">عضو 3</span></div><div class="exec-info"><h3>محمد الخالد</h3><div class="role">مختار من الجمعية</div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="عضو 4" loading="lazy"><span class="exec-badge council-member">عضو 4</span></div><div class="exec-info"><h3>هناء الطيب</h3><div class="role">مختارة من الجمعية</div></div></div>
+            <div class="exec-card"><div class="exec-photo"><img src="img/logo.png" alt="عضو 5" loading="lazy"><span class="exec-badge council-member">عضو 5</span></div><div class="exec-info"><h3>عمر الفاروق</h3><div class="role">مختار من الجمعية</div></div></div></div></div>
+          </div>
+        </section>
+        <br>
+
+        <section id="secretariats" class="structure-panel fade-in">
+          <div><h2>مهام و مسؤوليات الأمانات</h2></div><br>
+          <div class="secretariat-grid">
+            <div class="sec-card"><div class="sec-icon sec-icon-academic"><i class="fas fa-graduation-cap"></i></div><h3>الأمانة الأكاديمية</h3><p>تعنى بشؤون الطلاب الدراسية وتوفير الدعم الأكاديمي اللازم لتحقيق التميز.</p><div class="sec-tasks"><h4>المهام والمسؤوليات</h4><ul><li>متابعة الشؤون الدراسية والمنح</li><li>تنظيم جلسات التقوية والمراجعة</li><li>الإرشاد الأكاديمي للطلاب الجدد</li><li>توزيع المحاضرات المسجلة</li><li>متابعة طلبات الاعتراض على الدرجات</li></ul></div><div class="sec-leader"><img src="img/logo.png" alt="الأكاديمي" loading="lazy"><div class="sec-leader-info"><span>أمين الأمانة</span><strong> الاسم</strong></div></div></div>
+            <div class="sec-card delay-1"><div class="sec-icon sec-icon-social"><i class="fas fa-heart"></i></div><h3>الأمانة الاجتماعية</h3><p>تقوم بدور محوري في تعزيز الروابط الاجتماعية وحل المشكلات بين الطلاب.</p><div class="sec-tasks"><h4>المهام والمسؤوليات</h4><ul><li>تنظيم الرحلات واللقاءات التعارفية</li><li>دعم الطلاب الجدد عند الوصول</li><li>حل النزاعات بين الطلاب</li><li>متابعة المحتاجين وتقديم الدعم</li><li>تنظيم الحفلات والمناسبات</li></ul></div><div class="sec-leader"><img src="img/logo.png" alt="" loading="lazy"><div class="sec-leader-info"><span>أمين الأمانة</span><strong>الاسم</strong></div></div></div>
+            <div class="sec-card delay-2"><div class="sec-icon sec-icon-culture"><i class="fas fa-drum"></i></div><h3>الأمانة الثقافية</h3><p>حارسة الهوية السودانية، تحيي التراث وتعرّف الآخرين بعراقة الثقافة السودانية.</p><div class="sec-tasks"><h4>المهام والمسؤوليات</h4><ul><li>تنظيم مهرجان التراث السوداني السنوي</li><li>احتفالات الأعياد الوطنية السودانية</li><li>فعاليات المأكولات الشعبية والأزياء</li><li>أمسيات شعرية وأدبية</li><li>عروض الفنون والموسيقى السودانية</li></ul></div><div class="sec-leader"><img src="img/logo.png" alt="" loading="lazy"><div class="sec-leader-info"><span>أمين الأمانة</span><strong>الاسم</strong></div></div></div>
+            <div class="sec-card delay-3"><div class="sec-icon sec-icon-sports"><i class="fas fa-futbol"></i></div><h3>الأمانة الرياضية</h3><p>تنشيط الحياة الرياضية لتعزيز الصحة البدنية وروح الفريق بين الطلاب.</p><div class="sec-tasks"><h4>المهام والمسؤوليات</h4><ul><li>بطولة كرة القدم الداخلية</li><li>بطولة كرة السلة والشطرنج</li><li>تنس الطاولة والألعاب الأخرى</li><li>التنسيق مع اتحاد الجامعة الرياضي</li><li>تنظيم الرياضات الجماعية الترفيهية</li></ul></div><div class="sec-leader"><img src="img/logo.png" alt="" loading="lazy"><div class="sec-leader-info"><span>أمين الأمانة</span><strong>الاسم</strong></div></div></div>
+            <div class="sec-card delay-4"><div class="sec-icon sec-icon-media"><i class="fas fa-camera"></i></div><h3>الأمانة الإعلامية</h3><p>صوت الاتحاد وعينه، تنشر أخباره وتوثق فعالياته عبر الوسائل الحديثة.</p><div class="sec-tasks"><h4>المهام والمسؤوليات</h4><ul><li>إدارة منصات التواصل الاجتماعي</li><li>التصوير الفوتوغرافي والفيديو</li><li>إصدار النشرات الإخبارية الدورية</li><li>تصميم المطبوعات والمواد الترويجية</li><li>تغطية الفعاليات وأرشفتها</li></ul></div><div class="sec-leader"><img src="img/logo.png" alt="" loading="lazy"><div class="sec-leader-info"><span>أمين الأمانة</span><strong>الاسم</strong></div></div></div>
+            <div class="sec-card delay-5"><div class="sec-icon sec-icon-finance"><i class="fas fa-coins"></i></div><h3>الأمانة المالية</h3><p>الضمير المالي للاتحاد، تضمن الشفافية والحوكمة في إدارة الموارد.</p><div class="sec-tasks"><h4>المهام والمسؤوليات</h4><ul><li>تحصيل اشتراكات الأعضاء</li><li>إدارة ميزانية الاتحاد</li><li>صرف المستحقات المالية</li><li>إعداد التقارير المالية الدورية</li><li>مراجعة الحسابات وضمان الشفافية</li></ul></div><div class="sec-leader"><img src="img/logo.png" alt="" loading="lazy"><div class="sec-leader-info"><span>أمين الأمانة</span><strong>الاسم</strong></div></div></div>
+            <div class="sec-card"><div class="sec-icon sec-icon-external"><i class="fas fa-handshake"></i></div><h3>أمانة العلاقات الخارجية</h3><p>جسر التواصل مع العالم الخارجي، تبني شراكات تخدم الطلاب وتُعلي صوت الاتحاد.</p><div class="sec-tasks"><h4>المهام والمسؤوليات</h4><ul><li>التواصل مع اتحادات الطلاب الأخرى</li><li>تنظيم الفعاليات المشتركة</li><li>تمثيل الاتحاد في المحافل الخارجية</ li><<li>التنسيق مع السفارة والجهات الرسمية</ li><li>بناء شراكات مع منظمات الطلاب الدولية</ li></ul></div><<div class="sec-leader"><img src="img/logo.png" alt="" loading="lazy"><div class="sec-leader-info"><span>أمين الأمانة</span><strong>الاسم</strong></div></div></div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- STATS SECTION -->
+  <div class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in"><strong class="counter" data-target="247">0</strong><span>عضو مسجل في الاتحاد</span></div>
+        <div class="stat-item fade-in delay-1"><strong class="counter" data-target="38">0</strong><span>فعالية ونشاط منفذ</span></div>
+        <div class="stat-item fade-in delay-2"><strong class="counter" data-target="7">0</strong><span>أمانة متخصصة نشطة</span></div>
+        <div class="stat-item fade-in delay-3"><strong class="counter" data-target="5">0</strong><span>سنوات من الإنجاز</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- MEMBERS SECTION -->
+  <section class="members-section" id="members">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="section-tag"><i class="fas fa-users"></i> الأعضاء</span>
+        <h2 class="section-title">أسرة الاتحاد</h2>
+        <p class="section-subtitle">نرحب بجميع الطلاب السودانيين في جامعة قبرص الدولية للانضمام إلى عائلتنا</p>
+      </div>
+
+      <div class="membership-types fade-in">
+        <div class="membership-card"><div class="membership-icon" style="background:rgba(210,16,52,0.1);color:var(--red)"><i class="fas fa-user-check"></i></div><h3>عضو جمعية عمومية</h3><p>لجميع الطلاب السودانيين المسجلين في CIU و المسجلين في الجمعية العمومية، يتمتع بكامل الحقوق والامتيازات، وله حق التصويت والترشح للمناصب الاتحاد التنفيذية</p></div>
+        <div class="membership-card featured"><div class="membership-icon" style="background:rgba(0,122,61,0.1);color:var(--green)"><i class="fas fa-star"></i></div><h3>عضو مكتب تنفيذي</h3><p>وضع الخطط والبرامج النشاطات الاتحاد ومتابعة تنفيذها بصورة منتظمة , النظر والبحث في المشاكل التي تواجه السودانيين في الجامعة. وأي مهام اخرى تخدم الاتحاد السوداني في الجامعة.</p></div>
+        <div class="membership-card"><div class="membership-icon" style="background:rgba(99,102,241,0.1);color:#6366f1"><i class="fas fa-user-friends"></i></div><h3>عضو أمانة</h3><p>القيام بتنفيذ خطط الاتحاد في الامانة المحددة و التطوير المستمر للاتحاد وهو من اهم اعضاء الاتحاد فيعتبر العضو التنظيمي التنفيذي الاول.</p></div>
+      </div>
+
+      <h3 class="fade-in" style="font-size:22px;font-weight:800;margin-bottom:24px">دليل الأعضاء</h3>
+      <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+        <a href="file/MembershipGuide.pdf" class="btn btn-primary" target="_blank"><i class="fas fa-download"></i> العطاء الطلابي PDF</a>
+      </div>
+
+      <div class="members-grid" id="membersGrid"></div>
+
+      <h3 class="fade-in" style="font-size:22px;font-weight:800;margin-top:60px;margin-bottom:8px;text-align:center">انضم إلى الاتحاد</h3>
+      <p style="text-align:center;color:var(--gray-500);margin-bottom:0">سجّل الآن واستفد من جميع خدمات وفعاليات الاتحاد</p>
+
+      <div class="reg-form fade-in">
+        <div class="form-grid">
+          <div class="form-group"><label class="form-label">الاسم الكامل *</label><input type="text" class="form-control" placeholder="أدخل اسمك الكامل"></div>
+          <div class="form-group"><label class="form-label">رقم الطالب *</label><input type="text" class="form-control" placeholder="مثال: 20220001"></div>
+          <div class="form-group"><label class="form-label">البريد الجامعي *</label><input type="email" class="form-control" placeholder="name@ciu.edu.tr"></div>
+          <div class="form-group"><label class="form-label">رقم الهاتف / واتساب</label><input type="tel" class="form-control" placeholder="+357..."></div>
+          <div class="form-group"><label class="form-label">التخصص *</label><input type="text" class="form-control" placeholder="مثال: هندسة الحاسوب"></div>
+          <div class="form-group"><label class="form-label">السنة الدراسية *</label><select class="form-control" title="السنة الدراسية"><option>اختر السنة</option><option>السنة الأولى</option><option>السنة الثانية</option><option>السنة الثالثة</option><option>السنة الرابعة</option><option>دراسات عليا</option></select></div>
+          <div class="form-group full"><label class="form-label">الأمانة التي تود الانضمام إليها</label><select class="form-control" title="اختر الأمانة التي تود الانضمام إليها"><option>اختر أمانة</option><option>الجمعية العمومية</option><option>الأمانة الأكاديمية</option><option>الأمانة الاجتماعية</option><option>الأمانة الثقافية</option><option>الأمانة الرياضية</option><option>الأمانة الإعلامية</option><option>الأمانة المالية</option><option>أمانة العلاقات الخارجية</option></select></div>
+        </div>
+        <button class="form-submit" onclick="submitReg(event)"><i class="fas fa-user-plus"></i> تقديم طلب الانضمام</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- NEWS SECTION -->
+  <section id="news">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="section-tag"><i class="fas fa-newspaper"></i> الأخبار</span>
+        <h2 class="section-title">آخر الأخبار والإعلانات</h2>
+        <p class="section-subtitle">ابق على اطلاع بآخر أخبار وفعاليات اتحاد الطلاب السودانيين</p>
+      </div>
+
+      <div class="news-featured fade-in">
+        <div class="news-main"><img src="img/101.png" alt="مهرجان التراث" loading="lazy"><div class="news-main-overlay"><span class="news-cat">حدث</span><h2>مهرجان الربيع : احتفاء بالهوية وتجسيد للانتماء</h2><p><i class="fas fa-calendar"></i> ديسمبر 2025 &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> قاعة الاحتفالات الكبرى - CIU</p></div></div>
+        <div class="news-side"><div class="news-side-card"><div class="news-side-img"><img src="img/102.png" alt="" loading="lazy"></div><div class="news-side-info"><span class="news-cat-small">رياضة</span><h4>الاتحاد يشارك في الأنشطة الرياضية في الجامعة</h4><small><i class="fas fa-calendar"></i> نوفمبر 2025</small></div></div><div class="news-side-card"><div class="news-side-img"><img src="img/103.png" alt="" loading="lazy"></div><div class="news-side-info"><span class="news-cat-small">أكاديمي</span><h4>رحلة علمية تحت إشراف الأمانة الأكاديمية</h4><small><i class="fas fa-calendar"></i> نوفمبر 2025</small></div></div><div class="news-side-card"><div class="news-side-img"><img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=200&q=80" alt="" loading="lazy"></div><div class="news-side-info"><span class="news-cat-small">إعلان</span><h4>فتح باب تسجيل الطلاب الجدد في عضوية الاتحاد للفصل الجديد</h4><small><i class="fas fa-calendar"></i> أكتوبر 2026</small></div></div></div>
+      </div>
+
+      <div class="news-grid fade-in">
+        <div class="news-card"><div class="news-card-img"><img src="img/104.png" alt="" loading="lazy"><span class="news-tag">ثقافة</span></div><div class="news-card-body"><h3>ليلة تراثية سودانية تجمع الطلاب في حفل ساهر بالفن والتراث</h3><p>نظّمت الأمانة الثقافية أمسية فولكلورية ناجحة احتضنها مسرح الجامعة، شهدت عروضاً للرقصات الشعبية السودانية والموسيقى الأصيلة.</p><div class="news-meta"><span><i class="fas fa-calendar"></i> 5 نوفمبر 2024</span><span><i class="fas fa-eye"></i> 342 مشاهدة</span></div></div></div>
+        <div class="news-card"><div class="news-card-img"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=500&q=80" alt="" loading="lazy"><span class="news-tag">أكاديمي</span></div><div class="news-card-body"><h3>تقرير: نتائج استطلاع الاحتياجات الأكاديمية للطلاب السودانيين</h3><p>أجرت الأمانة الأكاديمية استطلاعاً شاملاً شمل 185 طالباً لتحديد أبرز التحديات الأكاديمية وسبل دعمهم بشكل أفضل.</p><div class="news-meta"><span><i class="fas fa-calendar"></i> 1 نوفمبر 2024</span><span><i class="fas fa-eye"></i> 211 مشاهدة</span></div></div></div>
+        <div class="news-card"><div class="news-card-img"><img src="https://images.unsplash.com/photo-1496469888073-80de7e952517?w=500&q=80" alt="" loading="lazy"><span class="news-tag">اجتماعي</span></div><div class="news-card-body"><h3>الاتحاد يستقبل الطلاب الجدد باحتفالية الترحيب للفصل الجديد</h3><p>أقام الاتحاد حفل استقبال دافئاً لأكثر من 40 طالباً سودانياً جديداً، قدّم فيه خدمات الإرشاد الأكاديمي وبرامج الدعم.</p><div class="news-meta"><span><i class="fas fa-calendar"></i> 25 أكتوبر 2024</span><span><i class="fas fa-eye"></i> 298 مشاهدة</span></div></div></div>
+        <div class="news-card"><div class="news-card-img"><img src="https://images.unsplash.com/photo-1507501336603-6e31db2be093?w=500&q=80" alt="" loading="lazy"><span class="news-tag">رياضة</span></div><div class="news-card-body"><h3>بطولة الشطرنج الداخلية: مواهب تلمع وإبداع يتألق</h3><p>اختُتمت بطولة الشطرنج الداخلية بتتويج اللاعب محمد عثمان بطلاً للبطولة في نهائي مثير استمر أكثر من ثلاث ساعات.</p><div class="news-meta"><span><i class="fas fa-calendar"></i> 18 أكتوبر 2024</span><span><i class="fas fa-eye"></i> 156 مشاهدة</span></div></div></div>
+      </div>
+
+      <div class="newsletter fade-in">
+        <h3><i class="fas fa-envelope-open-text"></i> اشترك في نشرتنا البريدية</h3>
+        <p>احصل على آخر أخبار وفعاليات الاتحاد مباشرة في بريدك الإلكتروني</p>
+        <div class="newsletter-form"><input type="email" placeholder="أدخل بريدك الإلكتروني..."><button onclick="subscribeNewsletter(event)"><i class="fas fa-paper-plane"></i> اشترك الآن</button></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="section-tag"><i class="fas fa-images"></i> المعرض</span>
+        <h2 class="section-title">معرض الصور والمقالات</h2>
+        <p class="section-subtitle">توثيق مرئي لأبرز فعاليات وأنشطة الاتحاد</p>
+      </div>
+
+      <div class="gallery-tabs fade-in">
+        <button class="gallery-tab active" onclick="filterGallery('all',this)">الكل</button>
+        <button class="gallery-tab" onclick="filterGallery('events',this)">الفعاليات</button>
+        <button class="gallery-tab" onclick="filterGallery('sports',this)">رياضة</button>
+        <button class="gallery-tab" onclick="filterGallery('trips',this)">رحلات</button>
+        <button class="gallery-tab" onclick="filterGallery('culture',this)">ثقافة</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item" data-cat="events" onclick="openLightbox(0)"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=500&q=80" alt="مهرجان التراث" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-item" data-cat="sports" onclick="openLightbox(1)"><img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=500&q=80" alt="كرة القدم" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-item" data-cat="culture" onclick="openLightbox(2)"><img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=500&q=80" alt="أمسية ثقافية" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-item" data-cat="trips" onclick="openLightbox(3)"><img src="https://images.unsplash.com/photo-1507501336603-6e31db2be093?w=500&q=80" alt="رحلة" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-item" data-cat="events" onclick="openLightbox(4)"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&q=80" alt="لقاء اجتماعي" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-item" data-cat="culture" onclick="openLightbox(5)"><img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=500&q=80" alt="أزياء تقليدية" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-item" data-cat="sports" onclick="openLightbox(6)"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=500&q=80" alt="كرة السلة" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="gallery-item" data-cat="trips" onclick="openLightbox(7)"><img src="https://images.unsplash.com/photo-1468254095679-bbcba94a7066?w=500&q=80" alt="فاماغوستا" loading="lazy"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      </div>
+
+      <div class="lightbox" id="lightbox" onclick="closeLightboxBg(event)">
+        <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+        <button class="lightbox-prev" onclick="changeLightbox(-1)"><i class="fas fa-chevron-right"></i></button>
+        <img id="lightboxImg" src="" alt="">
+        <button class="lightbox-next" onclick="changeLightbox(1)"><i class="fas fa-chevron-left"></i></button>
+      </div>
+
+      <div class="fade-in" style="margin-top:60px"><h3 style="font-size:24px;font-weight:800;margin-bottom:8px">مقالات الأعضاء</h3><p style="color:var(--gray-500);margin-bottom:0">مساحة للأعضاء لمشاركة أفكارهم وتجاربهم وخبراتهم</p></div>
+      <div class="articles-grid fade-in">
+        <div class="article-card">
+          <div class="article-img"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&q=80" alt="" loading="lazy"></div>
+          <div class="article-body">
+            <div class="article-meta"><div class="article-author"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=60&q=80" alt=""><span>منى حسن</span></div><span class="article-sec" style="background:rgba(210,16,52,0.1);color:var(--red)">أكاديمية</span></div>
+            <h3>كيف تستعد للامتحانات النهائية في ظروف الغربة؟</h3>
+            <p>نصائح عملية ومجربة من طالبة في سنتها الثالثة تشارككم تجربتها في التحضير للامتحانات...</p>
+            <div class="article-actions"><span class="article-status status-published"><i class="fas fa-check-circle"></i> منشور</span><button class="btn read-btn" onclick="openArticle('study-prep')">اقرأ المقال</button></div>
+          </div>
+        </div>
+        <div class="article-card">
+          <div class="article-img"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400&q=80" alt="" loading="lazy"></div>
+          <div class="article-body">
+            <div class="article-meta"><div class="article-author"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&q=80" alt=""><span>خديجة المهدي</span></div><span class="article-sec" style="background:rgba(0,122,61,0.1);color:var(--green)">ثقافية</span></div>
+            <h3>التراث السوداني: كيف نحافظ على هويتنا في الغربة</h3>
+            <p>تأمل في أهمية الاحتفاظ بالالهوية الثقافية وكيفية تمريرها للأجيال القادمة وسط بيئة متنوعة...</p>
+            <div class="article-actions"><span class="article-status status-published"><i class="fas fa-check-circle"></i> منشور</span><button class="btn read-btn" onclick="openArticle('culture-identity')">اقرأ المقال</button></div>
+          </div>
+        </div>
+        <div class="article-card">
+          <div class="article-img"><img src="https://images.unsplash.com/photo-1496469888073-80de7e952517?w=400&q=80" alt="" loading="lazy"></div>
+          <div class="article-body">
+            <div class="article-meta"><div class="article-author"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=60&q=80" alt=""><span>يوسف إبراهيم</span></div><span class="article-sec" style="background:rgba(99,102,241,0.1);color:#6366f1">تقني</span></div>
+            <h3>تجربتي في الحصول على منحة البحث العلمي في CIU</h3>
+            <p>رحلة كاملة من التجديم حتى الدقبول: الأوراق الألمطلوبة، المقابلات، والنصائح الذهبية...</p>
+            <div class="article-actions"><span class="article-status status-review"><i class="fas fa-clock"></i> قيد الأراجعة</span><button class="btn read-btn" onclick="openArticle('research-journey')">اقرأ المقال</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="article-modal" id="articleModal" onclick="closeArticle(event)">
+        <div class="article-modal__content">
+          <button class="article-modal__close" onclick="closeArticle(event)">×</button>
+          <h3 id="articleModalTitle"></h3>
+          <p id="articleModalBody"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ACTIVITIES SECTION -->
+  <section id="activities">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="section-tag"><i class="fas fa-calendar-alt"></i> الفعاليات</span>
+        <h2 class="section-title">الأنشطة والفعاليات</h2>
+        <p class="section-subtitle">برنامج متنوع وثري يلبي اهتمامات جميع الطلاب</p>
+      </div>
+
+      <div class="events-filter-bar fade-in">
+        <button class="filter-chip active" onclick="filterEvents('all',this)">الكل</button>
+        <button class="filter-chip" onclick="filterEvents('academic',this)">أكاديمية</button>
+        <button class="filter-chip" onclick="filterEvents('social',this)">اجتماعية</button>
+        <button class="filter-chip" onclick="filterEvents('cultural',this)">ثقافية</button>
+        <button class="filter-chip" onclick="filterEvents('sports',this)">رياضية</button>
+        <button class="filter-chip" onclick="filterEvents('trips',this)">رحلات</button>
+      </div>
+
+      <div class="activities-top">
+        <div><div class="events-grid" id="eventsGrid"><div class="event-card" data-type="cultural"><div class="event-img"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=500&q=80" alt="" loading="lazy"><div class="event-date-badge"><strong>15</strong><span>ديس</span></div></div><div class="event-body"><span class="event-sec-tag"><i class="fas fa-drum"></i>الأمانة الثقافية</span><h3>مهرجان التراث السوداني 2024</h3><p>احتفالية سنوية كبرى تعرض أجمل ما في الثقافة السودانية من فنون وموسيقى وأزياء ومأكولات شعبية.</p><div class="event-details"><span><i class="fas fa-clock"></i>الساعة 6:00 مساءً</span><span><i class="fas fa-map-marker-alt"></i>قاعة الاحتفالات الكبرى - CIU</span></div><div class="event-footer"><span class="event-attendees"><i class="fas fa-users"></i>150+ متوقع</span><a href="#" class="btn-sm">التسجيل</a></div></div></div><div class="event-card" data-type="sports"><div class="event-img"><img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=500&q=80" alt="" loading="lazy"><div class="event-date-badge"><strong>20</strong><span>ديس</span></div></div><div class="event-body"><span class="event-sec-tag"><i class="fas fa-futbol"></i>الأمانة الرياضية</span><h3>بطولة كرة القدم الداخلية 2024</h3><p>انطلاق منافسات كأس الاتحاد لكرة القدم بمشاركة 8 فرق تمثل مختلف التخصصات.</p><div class="event-details"><span><i class="fas fa-clock"></i>من 10:00 ص حتى المساء</span><span><i class="fas fa-map-marker-alt"></i>ملعب الجامعة الرئيسي</span></div><div class="event-footer"><span class="event-attendees"><i class="fas fa-users"></i>80 لاعب</span><a href="#" class="btn-sm">التسجيل</a></div></div></div><div class="event-card" data-type="academic"><div class="event-img"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=500&q=80" alt="" loading="lazy"><div class="event-date-badge" style="background:var(--green)"><strong>22</strong><span>ديس</span></div></div><div class="event-body"><span class="event-sec-tag"><i class="fas fa-graduation-cap"></i>الأمانة الأكاديمية</span><h3>جلسات مراجعة الامتحانات النهائية</h3><p>جلسات تقوية مكثفة لجميع المواد الأساسية يقدمها طلاب متميزون بإشراف الأمانة الأكاديمية.</p><div class="event-details"><span><i class="fas fa-clock"></i>يومياً 9:00 ص - 5:00 م</span><span><i class="fas fa-map-marker-alt"></i>قاعة المكتبة الرقمية</span></div><div class="event-footer"><span class="event-attendees"><i class="fas fa-users"></i>مفتوح للجميع</span><a href="#" class="btn-sm">تفاصيل</a></div></div></div><div class="event-card" data-type="trips"><div class="event-img"><img src="https://images.unsplash.com/photo-1468254095679-bbcba94a7066?w=500&q=80" alt="" loading="lazy"><div class="event-date-badge" style="background:#7c3aed"><strong>10</strong><span>يناير</span></div></div><div class="event-body"><span class="event-sec-tag"><i class="fas fa-bus"></i>الأمانة الاجتماعية</span><h3>رحلة ترفيهية إلى مدينة فاماغوستا</h3><p>رحلة ممتعة لاستكشاف المدينة التاريخية فاماغوستا وزيارة المعالم الأثرية والاستمتاع بالشواطئ.</p><div class="event-details"><span><i class="fas fa-clock"></i>8:00 ص - 8:00 م</span><span><i class="fas fa-map-marker-alt"></i>التجمع أمام الجامعة</span></div><div class="event-footer"><span class="event-attendees"><i class="fas fa-users"></i>50 مقعد متاح</span><a href="#" class="btn-sm">احجز مقعدك</a></div></div></div><div class="event-card" data-type="social"><div class="event-img"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&q=80" alt="" loading="lazy"><div class="event-date-badge" style="background:var(--green)"><strong>25</strong><span>يناير</span></div></div><div class="event-body"><span class="event-sec-tag"><i class="fas fa-heart"></i>الأمانة الاجتماعية</span><h3>لقاء التعارف الدوري للطلاب الجدد</h3><p>مساحة مفتوحة ودودة للطلاب الجدد للتعرف على بعضهم وعلى أعضاء الاتحاد والتواصل مع الأقدم منهم.</p><div class="event-details"><span><i class="fas fa-clock"></i>4:00 م - 7:00 م</span><span><i class="fas fa-map-marker-alt"></i>الحديقة المركزية - CIU</span></div><div class="event-footer"><span class="event-attendees"><i class="fas fa-users"></i>مفتوح للجميع</span><a href="#" class="btn-sm">المزيد</a></div></div></div><div class="event-card" data-type="cultural"><div class="event-img"><img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=500&q=80" alt="" loading="lazy"><div class="event-date-badge"><strong>1</strong><span>فبراير</span></div></div><div class="event-body"><span class="event-sec-tag"><i class="fas fa-utensils"></i>الأمانة الثقافية</span><h3>يوم المأكولات السودانية الشعبية</h3><p>يوم خاص تُقدَّم فيه أشهى المأكولات السودانية التقليدية ويُتعرّف فيه على التنوع الغذائي السوداني الرائع.</p><div class="event-details"><span><i class="fas fa-clock"></i>12:00 - 4:00 م</span><span><i class="fas fa-map-marker-alt"></i>ساحة الكافتيريا الرئيسية</span></div><div class="event-footer"><span class="event-attendees"><i class="fas fa-users"></i>200+ متوقع</span><a href="#" class="btn-sm">تفاصيل</a></div></div></div></div></div>
+
+        <div class="upcoming-sidebar fade-right">
+          <h3><i class="fas fa-clock" style="color:var(--red);margin-inline-end:8px"></i>قادماً قريباً</h3>
+          <div class="upcoming-item"><div class="upcoming-date"><strong>15</strong>ديس</div><div class="upcoming-info"><h5>مهرجان التراث السوداني</h5><span>6:00 م - قاعة الاحتفالات</span></div></div>
+          <div class="upcoming-item"><div class="upcoming-date"><strong>20</strong>ديس</div><div class="upcoming-info"><h5>بطولة كرة القدم</h5><span>10:00 ص - الملعب الرئيسي</span></div></div>
+          <div class="upcoming-item"><div class="upcoming-date"><strong>22</strong>ديس</div><div class="upcoming-info"><h5>جلسات المراجعة</h5><span>9:00 ص - مكتبة CIU</span></div></div>
+          <div class="upcoming-item"><div class="upcoming-date" style="background:var(--green)"><strong>10</strong>يناير</div><div class="upcoming-info"><h5>رحلة فاماغوستا</h5><span>8:00 ص - أمام الجامعة</span></div></div>
+          <div class="mini-calendar"><h4><i class="fas fa-calendar"></i> ديسمبر 2024</h4><div class="cal-header"><button type="button" title="الشهر السابق"><i class="fas fa-chevron-right"></i></button><span>ديسمبر 2024</span><button type="button" title="الشهر التالي"><i class="fas fa-chevron-left"></i></button></div><div class="cal-days" id="miniCal"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- GUIDELINES SECTION -->
+  <section class="guidelines-section" id="guidelines">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="section-tag"><i class="fas fa-book-open"></i> الإرشادات</span>
+        <h2 class="section-title">دليل الطلاب الإرشادي</h2>
+        <p class="section-subtitle">كل ما تحتاجه لبداية ناجحة في قبرص</p>
+      </div>
+
+      <nav class="structure-nav guide-nav fade-in" role="navigation" aria-label="الإرشادات">
+        <ul>
+          <li><a href="#guide-money" onclick="switchGuidePanel('guide-money', this); return false;" class="active"><i class="fas fa-money-bill-wave"></i> استلام الأموال</a></li>
+          <li><a href="#guide-residence" onclick="switchGuidePanel('guide-residence', this); return false;"><i class="fas fa-id-card"></i> الإقامة</a></li>
+          <li><a href="#guide-housing" onclick="switchGuidePanel('guide-housing', this); return false;"><i class="fas fa-home"></i> السكن</a></li>
+          <li><a href="#guide-newcomers" onclick="switchGuidePanel('guide-newcomers', this); return false;"><i class="fas fa-plane-arrival"></i> الطلاب الجدد</a></li>
+        </ul>
+      </nav>
+
+      <div class="structure-content">
+        <style>.guide-panel:not(#guide-money) { display: none; }</style>
+        
+        <div class="guide-panel active fade-right" id="guide-money">
+          <h3><i class="fas fa-money-bill-wave" style="color:var(--green);margin-inline-end:12px"></i> استلام الأموال والتحويلات البنكية</h3>
+          <div class="panel-card">
+            <ol class="guide-list">
+              <li class="guide-item"><i class="fas fa-university"></i> البنوك المتوفرة: Ziraat Bank, Near East Bank, Limassol Co-op</li>
+              <li class="guide-item"><i class="fas fa-mobile-alt"></i> التطبيقات: Western Union, MoneyGram, Wise (ننصح بـ Wise للرسوم المنخفضة)</li>
+              <li class="guide-item"><i class="fas fa-clock"></i> ساعات العمل: 9:00 ص - 4:00 م (السبت حتى 12:00)</li>
+              <li class="guide-item"><i class="fas fa-map-marker-alt"></i> أقرب فرع: Ziraat Bank داخل حرم CIU (5 دقائق مشياً)</li>
+              <li class="guide-item"><i class="fas fa-credit-card"></i> الحساب البنكي: IBAN مطلوب + بطاقة هوية</li>
+            </ol>
+            <div class="guide-tip"><i class="fas fa-lightbulb" style="color:#f59e0b"></i><strong>نصيحة:</strong> استخدم Wise لتوفير 50% من الرسوم مقارنة Western Union</div>
+          </div>
+        </div>
+
+        <div class="guide-panel fade-left" id="guide-residence" style="display: none;">
+          <h3><i class="fas fa-id-card" style="color:var(--green);margin-inline-end:12px"></i> إجراءات الإقامة (Residence Permit)</h3>
+          <div class="panel-card">
+            <ol class="guide-list">
+              <li class="guide-item"><i class="fas fa-clock"></i> الموعد: خلال 30 يوم من الوصول إلى قبرص</li>
+              <li class="guide-item"><i class="fas fa-file-alt"></i> الموقع: permissions.gov.ct.tr أو مكتب الهجرة في نيقوسيا</li>
+              <li class="guide-item"><i class="fas fa-euro-sign"></i> الرسوم: 60 يورو (تجديد 30 يورو)</li>
+              <li class="guide-item"><i class="fas fa-passport"></i> الوثائق: جواز سفر + تأشيرة طالب + خطاب قبول CIU + صور شخصية</li>
+              <li class="guide-item"><i class="fas fa-id-card"></i> مدة الإقامة: سنة واحدة (قابلة للتجديد)</li>
+            </ol>
+            <div class="guide-tip"><i class="fas fa-lightbulb" style="color:#f59e0b"></i><strong>نصيحة:</strong> سجل موعدك online قبل الذهاب لتوفير الوقت</div>
+          </div>
+        </div>
+
+        <div class="guide-panel fade-right" id="guide-housing" style="display: none;">
+          <h3><i class="fas fa-home" style="color:var(--green);margin-inline-end:12px"></i> خيارات السكن والشقق</h3>
+          <div class="panel-card">
+            <ol class="guide-list">
+              <li class="guide-item"><i class="fas fa-bed"></i> سكن الجامعة: 250-400 يورو/شهر (مفروش)</li>
+              <li class="guide-item"><i class="fas fa-building"></i> شقق خارجية: 350-600 يورو/شهر (غير مفروشة)</li>
+              <li class="guide-item"><i class="fas fa-users"></i> السعر للشخص: 150-250 يورو في شقة مشتركة</li>
+              <li class="guide-item"><i class="fas fa-map-marker-alt"></i> المناطق: Girne, Kyrenia, Nicosia (15-30 دقيقة للجامعة)</li>
+              <li class="guide-item"><i class="fas fa-handshake"></i> عقد الإيجار: 11 شهر + كفالة شهر واحد</li>
+            </ol>
+            <div class="guide-tip"><i class="fas fa-lightbulb" style="color:#f59e0b"></i><strong>نصيحة:</strong> تحقق من Facebook Groups: "CIU Students Housing"</div>
+          </div>
+        </div>
+
+        <div class="guide-panel fade-left" id="guide-newcomers" style="display: none;">
+          <h3><i class="fas fa-plane-arrival" style="color:var(--green);margin-inline-end:12px"></i> الطلاب الوافدين الجدد</h3>
+          <div class="panel-card">
+            <ol class="guide-list">
+              <li class="guide-item"><i class="fas fa-plane"></i> المطار: Larnaca (LCA) أو Ercan (ECN) - ننصح بشراء SIM Card فور الوصول</li>
+              <li class="guide-item"><i class="fas fa-taxi"></i> النقل: تاكسي للجامعة ≈ 50-70 يورو (اتفق مسبقاً)</li>
+              <li class="guide-item"><i class="fas fa-phone"></i> رقم الطوارئ: 155 (شرطة) / 112 (طبي) - اتصل بـ SSU: +90 548 000 0000</li>
+              <li class="guide-item"><i class="fas fa-shopping-cart"></i> الأولويات: SIM Card → بنك → إقامة → سكن → تسجيل CIU</li>
+              <li class="guide-item"><i class="fas fa-calendar-check"></i> الأسبوع الأول: Orientation Week مع SSU (انضم للمجموعة)</li>
+            </ol>
+            <div class="guide-tip"><i class="fas fa-lightbulb" style="color:#f59e0b"></i><strong>نصيحة:</strong> لا تدفع كامل الإيجار مقدمًا - تحقق من العقد جيداً</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- IMPORTANT LINKS SECTION -->
+  <section id="links">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="section-tag"><i class="fas fa-link"></i> الروابط</span>
+        <h2 class="section-title">روابط مهمة</h2>
+        <p class="section-subtitle">جميع الروابط التي تحتاجها في مكان واحد</p>
+      </div>
+
+      <div class="links-grid fade-in">
+        <div class="links-group">
+          <div class="links-group-header"><div class="links-group-icon" style="background:rgba(59,130,246,0.1);color:#3b82f6"><i class="fas fa-university"></i></div><div><h3>جامعة قبرص الدولية (CIU)</h3><p style="font-size:12px;color:var(--gray-400);margin:0">Cyprus International University</p></div></div>
+          <a href="https://www.ciu.edu.tr" target="_blank" rel="noopener noreferrer" class="link-item"><div class="link-item-icon" style="color:#3b82f6"><i class="fas fa-globe"></i></div><div class="link-item-info"><h4>الموقع الرسمي</h4><span>www.ciu.edu.tr</span></div><i class="fas fa-external-link-alt arrow"></i></a>
+          <a href="https://sis.ciu.edu.tr/users/login" target="_blank" rel="noopener noreferrer" class="link-item"><div class="link-item-icon" style="color:var(--green)"><i class="fas fa-user-circle"></i></div><div class="link-item-info"><h4>بوابة الطالب (SIS)</h4><span>sis.ciu.edu.tr</span></div><i class="fas fa-external-link-alt arrow"></i></a>
+          <a href="https://ciu.edu.tr/en/study/academic-calendar" target="_blank" rel="noopener noreferrer" class="link-item"><div class="link-item-icon" style="color:var(--red)"><i class="fas fa-calendar-alt"></i></div><div class="link-item-info"><h4>التقويم الأكاديمي</h4><span>ciu.edu.tr/en/study/academic-calendar</span></div><i class="fas fa-external-link-alt arrow"></i></a>
+          <a href="https://ciu.edu.tr/en/student-life/library" target="_blank" rel="noopener noreferrer" class="link-item"><div class="link-item-icon" style="color:#f59e0b"><i class="fas fa-book"></i></div><div class="link-item-info"><h4>المكتبة الرقمية</h4><span>ciu.edu.tr/en/student-life/library</span></div><i class="fas fa-external-link-alt arrow"></i></a>
+          <a href="https://ciu.edu.tr/en/student-life/campus-services/transportation" target="_blank" rel="noopener noreferrer" class="link-item"><div class="link-item-icon" style="color:#8b5cf6"><i class="fas fa-bus"></i></div><div class="link-item-info"><h4>مواعيد بصات الجامعة</h4><span>ciu.edu.tr/en/student-life/campus-services/transportation</span></div><i class="fas fa-external-link-alt arrow"></i></a>
+          <a href="https://t.me/+RLkEtw_IZ2c2YWY0" target="_blank" rel="noopener noreferrer" class="link-item"><div class="link-item-icon" style="color:#ec4899"><i class="fas fa-calendar-check"></i></div><div class="link-item-info"><h4>جدول الامتحانات</h4><span>t.me/+RLkEtw_IZ2c2YWY0</span></div><i class="fas fa-external-link-alt arrow"></i></a>
+        </div>
+
+        <div class="links-group">
+          <div class="links-group-header"><div class="links-group-icon" style="background:rgba(210,16,52,0.1);color:var(--red)"><i class="fas fa-flag"></i></div><div><h3>روابط حكومية وسفارة</h3><p style="font-size:12px;color:var(--gray-400);margin:0">Government & Embassy Links</p></div></div>
+          <a href="https://permissions.gov.ct.tr/login" target="_blank" rel="noopener noreferrer" class="link-item"><div class="link-item-icon" style="color:var(--red)"><i class="fas fa-id-card"></i></div><div class="link-item-info"><h4>دائرة الهجرة والتأشيرات</h4><span>permissions.gov</span></div><i class="fas fa-external-link-alt arrow"></i></a>
+          <a href="https://sudanist.com/" target="_blank" rel="noopener noreferrer" class="link-item"><div class="link-item-icon" style="color:var(--green)"><i class="fas fa-landmark"></i></div><div class="link-item-info"><h4>السفارة السودانية في اسطمبول</h4><span>sudanist.com</span></div><i class="fas fa-external-link-alt arrow"></i></a>
+          <a href="https://t.me/+RLkEtw_IZ2c2YWY0" target="_blank" rel="noopener noreferrer" class="link-item"><div class="link-item-icon" style="color:#0088cc"><i class="fab fa-telegram"></i></div><div class="link-item-info"><h4>قناة الاتحاد على تيليغرام</h4><span>t.me/+RLkEtw_IZ2c2YWY0</span></div><i class="fas fa-external-link-alt arrow"></i></a>
+          <a href="https://www.facebook.com/share/1ArfYKhT5a/" target="_blank" rel="noopener noreferrer" class="link-item"><div class="link-item-icon" style="color:#1877f2"><i class="fab fa-facebook"></i></div><div class="link-item-info"><h4>صفحة الاتحاد على فيسبوك</h4><span>facebook.com/share/1ArfYKhT5a</span></div><i class="fas fa-external-link-alt arrow"></i></a>
+          <a href="https://wa.me/+905480000000" target="_blank" rel="noopener noreferrer" class="link-item"><div class="link-item-icon" style="color:#25d366"><i class="fab fa-whatsapp"></i></div><div class="link-item-info"><h4>مجموعة الطلاب الجدد واتساب</h4><span>wa.me/+905480000000</span></div><i class="fas fa-external-link-alt arrow"></i></a>
+          <a href="https://www.instagram.com/ssu_ciu?igsh=MXNrdDB3NmczZHdlaA==" target="_blank" rel="noopener noreferrer" class="link-item"><div class="link-item-icon" style="color:#0088cc"><i class="fab fa-instagram"></i></div><div class="link-item-info"><h4>صفحة الاتحاد على انستغرام</h4><span>SSU_CIU</span></div><i class="fas fa-external-link-alt arrow"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" style="background:var(--gray-50)">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="section-tag"><i class="fas fa-envelope"></i> تواصل</span>
+        <h2 class="section-title">تواصل معنا</h2>
+        <p class="section-subtitle">نحن هنا للإجابة على استفساراتك ومساعدتك في كل ما تحتاج</p>
+      </div>
+
+      <div class="contact-grid fade-in">
+        <div class="contact-info">
+          <h2>كيف يمكنك التواصل معنا؟</h2>
+          <p>فريق الاتحاد متاح دائماً للرد على استفساراتك. تواصل معنا عبر أي من القنوات التالية وسنرد عليك في أقرب وقت ممكن.</p>
+          <div class="contact-items">
+            <div class="contact-item"><div class="contact-icon" style="background:rgba(210,16,52,0.1);color:var(--red)"><i class="fas fa-envelope"></i></div><div><h4>البريد الإلكتروني</h4><p>sudanese.students@ciu.edu.tr</p></div></div>
+            <div class="contact-item"><div class="contact-icon" style="background:rgba(0,122,61,0.1);color:var(--green)"><i class="fab fa-whatsapp"></i></div><div><h4>واتساب الاتحاد</h4><p>+90 548 000 0000</p></div></div>
+            <div class="contact-item"><div class="contact-icon" style="background:rgba(0,136,204,0.1);color:#0088cc"><i class="fab fa-telegram"></i></div><div><h4>تيليغرام</h4><p>@SSU_CIU</p></div></div>
+            <div class="contact-item"><div class="contact-icon" style="background:rgba(99,102,241,0.1);color:#6366f1"><i class="fas fa-map-marker-alt"></i></div><div><h4>مكتب الاتحاد</h4><p>قاعة الأنشطة الطلابية - مبنى A - CIU</p></div></div>
+          </div>
+          <h4 style="font-size:15px;font-weight:700;margin-bottom:14px">تابعنا على وسائل التواصل</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1ArfYKhT5a/" class="social-btn social-facebook"><i class="fab fa-facebook"></i>فيسبوك</a>
+            <a href="https://www.instagram.com/ssu_ciu?igsh=MXNrdDB3NmczZHdlaA==" class="social-btn social-instagram"><i class="fab fa-instagram"></i>انستغرام</a>
+            <a href="https://www.tiktok.com/@ssu_ciu?_r=1&_t=ZS-94xPRZHPfoe" class="social-btn social-tiktok"><i class="fab fa-tiktok"></i>تيك توك</a>
+            <a href="https://t.me/+RLkEtw_IZ2c2YWY0" class="social-btn social-telegram"><i class="fab fa-telegram"></i>تيليغرام</a>
+            <a href="https://x.com/ssu_ciu" class="social-btn social-twitter"><i class="fab fa-x-twitter"></i>إكس</a>
+            <a href="#" class="social-btn social-whatsapp"><i class="fab fa-whatsapp"></i>واتساب</a>
+          </div>
+        </div>
+
+        <div class="contact-form fade-right">
+          <h3><i class="fas fa-paper-plane" style="color:var(--red);margin-inline-end:10px"></i>أرسل رسالتك</h3>
+          <div class="form-grid">
+            <div class="form-group"><label class="form-label">الاسم الكامل *</label><input type="text" class="form-control" id="cName" placeholder="اسمك الكامل"></div>
+            <div class="form-group"><label class="form-label">البريد الإلكتروني *</label><input type="email" class="form-control" id="cEmail" placeholder="بريدك الإلكتروني"></div>
+            <div class="form-group"><label class="form-label">رقم الطالب</label><input type="text" class="form-control" placeholder="رقم طالبك (اختياري)"></div>
+            <div class="form-group"><label class="form-label">موضوع الرسالة *</label><select class="form-control" id="cSubject" title="اختر موضوع الرسالة"><option value="">اختر الموضوع</option><option>استفسار عام</option><option>اقتراح للاتحاد</option><option>شكوى</option><option>طلب تطوع</option><option>استضافة فعالية</option><option>أكاديمي</option><option>اجتماعي</option></select></div>
+            <div class="form-group full"><label class="form-label">الأمانة المعنية</label><select class="form-control" title="اختر الأمانة المعنية"><option>الاتحاد بشكل عام</option><option>الأمانة الأكاديمية</option><option>الأمانة الاجتماعية</option><option>الأمانة الثقافية</option><option>الأمانة الرياضية</option><option>الأمانة الإعلامية</option><option>الأمانة المالية</option></select></div>
+            <div class="form-group full"><label class="form-label">الرسالة *</label><textarea class="form-control" id="cMsg" rows="5" placeholder="اكتب رسالتك هنا..."></textarea></div>
+            <div class="form-group full"><label class="form-label">رفع ملف (اختياري)</label><input type="file" class="form-control" title="رفع ملف مرفق (اختياري)"></div>
+          </div>
+          <button class="form-submit" onclick="submitContact(event)"><i class="fas fa-paper-plane"></i> إرسال الرسالة</button>
+          <div class="success-msg" id="successMsg"><i class="fas fa-check-circle"></i> تم إرسال رسالتك بنجاح! سنرد عليك خلال 24-48 ساعة.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><div class="logo-icon">ط</div><div class="logo-text"><div class="ar" style="color:#fff">اتحاد الطلاب السودانيين</div><div class="en" style="color:rgba(255,255,255,0.5)">SSU - CIU Cyprus</div></div></div>
+          <p>اتحاد الطلاب السودانيين في جامعة قبرص الدولية - صوتكم، مجتمعكم، وبيتكم الثاني في قبرص منذ 2019.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/share/1ArfYKhT5a/" title="فيسبوك"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/ssu_ciu?igsh=MXNrdDB3NmczZHdlaA==" title="انستغرام"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@ssu_ciu?_r=1&_t=ZS-94xPRZHPfoe" title="تيك توك"><i class="fab fa-tiktok"></i></a>
+            <a href="https://t.me/+RLkEtw_IZ2c2YWY0" title="تيليغرام"><i class="fab fa-telegram"></i></a>
+            <a href="https://x.com/ssu_ciu" title="إكس"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>الاتحاد</h4><ul><li><a href="#about">عن الاتحاد</a></li><li><a href="#structure">هيكل الاتحاد</a></li><li><a href="#members">الأعضاء</a></li><li><a href="#activities">الفعاليات</a></li><li><a href="#news">الأخبار</a></li><li><a href="#gallery">المعرض</a></li></ul></div>
+        <div class="footer-col"><h4>الخدمات</h4><ul><li><a href="#guidelines">الإرشادات</a></li><li><a href="#links">روابط مهمة</a></li><li><a href="#members">التسجيل</a></li><li><a href="#contact">تواصل معنا</a></li></ul><h4 style="margin-top:24px">تواصل</h4><ul><li><a href="mailto:sudanese.students@ciu.edu.tr"><i class="fas fa-envelope" style="margin-inline-end:6px;color:var(--red)"></i>sudanese.students@ciu.edu.tr</a></li><li><a href="tel:+905480000000"><i class="fab fa-whatsapp" style="margin-inline-end:6px;color:#25d366"></i>+90 548 000 0000</a></li></ul></div>
+        <div class="footer-col"><h4>النشرة البريدية</h4><p style="font-size:13px;margin-bottom:14px;opacity:.7">اشترك للحصول على آخر أخبار الاتحاد</p><div class="footer-newsletter"><input type="email" placeholder="بريدك الإلكتروني..."><button><i class="fas fa-paper-plane"></i> اشتراك</button></div></div>
+      </div>
+      <div class="footer-bottom"><p>© 2024 اتحاد الطلاب السودانيين - جامعة قبرص الدولية. جميع الحقوق محفوظة.</p><div class="footer-flag"><span>صُنع بـ ❤️ للطلاب السودانيين في قبرص</span><div class="flag-stripe"><div style="background:var(--red)"></div><div style="background:#fff"></div><div style="background:var(--black)"></div><div style="background:var(--green)"></div></div></div></div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+</body>
+</html>
+
+
